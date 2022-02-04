@@ -42,7 +42,7 @@
         android:hint="Starting Cash"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +140,7 @@
         android:hint="Interest Rate (Percent)"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/principleTextBox" />
@@ -154,9 +154,19 @@
         android:hint="# Years"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/interestTextBox" />
+
+    <ImageView
+        android:id="@+id/settingsView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
