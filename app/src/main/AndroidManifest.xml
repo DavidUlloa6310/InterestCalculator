@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InterestCalculator">
         <activity
-            android:name=".CalculationActivity"
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

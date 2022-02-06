@@ -2,6 +2,7 @@ package com.example.interestcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -12,6 +13,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String BALANCE_MESSAGE = "com.example.interestCalculator.BALANCE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +78,18 @@ public class MainActivity extends AppCompatActivity {
             finalAmount = principle * Math.exp(interest * years);
         }
 
-        System.out.println(finalAmount);
+        Intent intent = new Intent(this, DisplayActivity.class);
+        intent.putExtra(BALANCE_MESSAGE, finalAmount);
+        startActivity(intent);
 
     }
 
     public boolean isEmpty() {
         return false;
+    }
+
+    public void goToSettings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 }
